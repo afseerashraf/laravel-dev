@@ -9,4 +9,5 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/login', 'login')->name('login');
     Route::get('/register', 'register')->name('register');
     Route::get('/table', 'table')->name('Table');
+    Route::get('/general', 'general')->name('general');
 });

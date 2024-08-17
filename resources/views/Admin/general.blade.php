@@ -1496,9 +1496,9 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{ asset('admin/login/js/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/general/js/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('admin/login/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/general/js/bootstrap.bundle.min.js') }}"></script>
 <!-- bs-custom-file-input -->
 <script src="{{ asset('admin/general/js/bs-custom-file-input.min.js') }}"></script>
 <!-- AdminLTE App -->

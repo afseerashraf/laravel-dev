@@ -18,4 +18,7 @@ class AdminController extends Controller
     public function table(){
         return view('admin.simple');
     }
+    public function general(){
+        return view('admin.general');
+    }
 }
