@@ -14,17 +14,17 @@
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset('admin/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{{ asset('admin/icheck-bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/icheck-bootstrap.min.css') }}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="{{ asset('admin/jqvmap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/jqvmap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('admin/css/adminlte.min.css') }}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('admin/css/OverlayScrollbars.min.css') }}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ asset('admin/daterangepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/daterangepicker.css') }}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{{ asset('admin/summernote-bs4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/summernote-bs4.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
