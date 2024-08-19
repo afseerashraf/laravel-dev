@@ -8,23 +8,23 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('admin/dashboard/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/all.min.css') }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ asset('admin/dashboard/css/tempusdominus-bootstrap-4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
   <link rel="stylesheet" href="{{ asset('admin/dashboard/css/icheck-bootstrap.min.css') }}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href=" {{ asset('admin/dashboard/css/jqvmap.min.css') }}">
+  <link rel="stylesheet" href=" {{ asset('admin/css/jqvmap.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('admin/dashboard/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/adminlte.min.css') }}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('admin/css/OverlayScrollbars.min.css') }}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ asset('admin/dashboard/css/daterangepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/daterangepicker.css') }}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{{ asset('admin/dashboard/css/summernote-bs4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/summernote-bs4.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -1477,30 +1477,30 @@
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('admin/dashboard/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
 <!-- ChartJS -->
-<script src="{{ asset('admin/dashboard/js/Chart.min.js') }}"></script>
+<script src="{{ asset('admin/js/Chart.min.js') }}"></script>
 <!-- Sparkline -->
-<script src="{{ asset('admin/dashboard/js/sparkline.js') }}"></script>
+<script src="{{ asset('admin/js/sparkline.js') }}"></script>
 <!-- JQVMap -->
-<script src="{{ asset('admin/dashboard/js/jquery.vmap.min.js') }}"></script>
-<script src="{{ asset('admin/dashboard/js/jquery.vmap.usa.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.vmap.min.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.vmap.usa.js') }}"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{ asset('admin/dashboard/js/jquery.knob.min.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.knob.min.js') }}"></script>
 <!-- daterangepicker -->
-<script src="{{ asset('admin/dashboard/js/moment.min.js') }}"></script>
-<script src="{{ asset('admin/dashboard/js/daterangepicker.js') }}"></script>
+<script src="{{ asset('admin/js/moment.min.js') }}"></script>
+<script src="{{ asset('admin/js/daterangepicker.js') }}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{ asset('admin/dashboard/js/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<script src="{{ asset('admin/js/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 <!-- Summernote -->
-<script src="{{ asset('admin/dashboard/js/summernote-bs4.min.js') }}"></script>
+<script src="{{ asset('admin/js/summernote-bs4.min.js') }}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset('admin/dashboard/js/js/jquery.overlayScrollbars.min.js') }}"></script>
+<script src="{{ asset('admin/js/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('admin/dashboard/js/adminlte.js') }}"></script>
+<script src="{{ asset('admin/js/adminlte.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('admin/dashboard/js/demo.js') }}"></script>
+<script src="{{ asset('admin/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('admin/dashboard/js/dashboard.js') }}"></script>
+<script src="{{ asset('admin/js/dashboard.js') }}"></script>
 </body>
 </html>

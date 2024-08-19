@@ -8,9 +8,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('admin/simple/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/all.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('admin/simple/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin/css/adminlte.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -1563,12 +1563,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{ asset('admin/simple/js/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('admin/simple/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('admin/simple/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('admin/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('admin/simple/js/demo.js') }}"></script>
+<script src="{{ asset('admin/js/demo.js') }}"></script>
 </body>
 </html>
