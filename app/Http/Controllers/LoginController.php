@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function login(){
-        return view('Login.login');
+        return view('admin.login');
     }
-    public function userLogin(LoginRequest $request){
+    public function adminLogin(LoginRequest $request){
         $email = $request->email;
         $password = $request->password;
 
@@ -21,5 +21,9 @@ class LoginController extends Controller
         }else{
             return redirect()->route('login');
         }
+    }
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

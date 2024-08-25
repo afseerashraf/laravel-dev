@@ -7,6 +7,7 @@
         {{ session('message') }}
     @endif
 </h5>
+<h3>{{ auth()->User()->email }}</h3>
 <a href="{{ route('create') }}" class="btn btn-outline-success">New</a>
 <table class="table">
   <thead>
@@ -37,4 +38,5 @@
    
   </tbody>
 </table>
+<a href="{{ route('logout') }}" class="btn btn-outline-success">Logout</a>
 @endsection

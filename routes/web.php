@@ -8,9 +8,9 @@ use App\Models\Student;
 
 
 Route::controller(LoginController::class)->group(function(){
-   
     Route::get('/', 'login')->name('login');
-    Route::post('/userlogin', 'userLogin')->name('userLogin');
+    Route::post('/adminlogin', 'adminLogin')->name('adminLogin');
+    Route::get('/logout', 'logout')->name('logout');
 });
 Route::controller(AdminController::class)->group(function(){
     Route::get('/dashboard','index')->name('dashboard');
@@ -25,17 +25,18 @@ Route::controller(AdminController::class)->group(function(){
 });
 
 Route::prefix('student')->group(function(){
-    Route::controller(StudentController::class)->group(function(){
-        Route::get('/index', 'index')->name('create');
-        Route::post('/create', 'create')->name('create.student');
-        Route::get('/list', 'getStudents')->name('list');
-        Route::get('edit/{id}', 'edit')->name('edit');
-        Route::post('/update', 'update')->name('student.updated');
-        Route::get('/delete/{id}', 'delete')->name('student.delete');
+    Route::middleware('auth')->group(function(){
+        Route::controller(StudentController::class)->group(function(){
+            Route::get('/index', 'index')->name('create');
+            Route::post('/create', 'create')->name('create.student');
+            Route::get('/list', 'getStudents')->name('list')->middleware('auth');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::post('/update', 'update')->name('student.updated');
+            Route::get('/delete/{id}', 'delete')->name('student.delete');
+        });
     });
+   
 });
 
-Route::get('/login', function(){
-    return view('login.login');
-});
+
 
