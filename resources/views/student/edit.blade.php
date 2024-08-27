@@ -7,7 +7,7 @@
         <div class="form-group">
         <input type="hidden" name="id" id="id" value="{{encrypt($student->id)}}">
 
-            <label for="studentName">Studnet Name</label>
+            <label for="studentName">Student Name</label>
             <input type="text" class="form-control" name="studentName" id="studentName" value="{{ $student->student_name }}" placeholder="Enter name">
         </div>
 

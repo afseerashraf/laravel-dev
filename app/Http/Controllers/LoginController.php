@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
+
 
 class LoginController extends Controller
 {
@@ -16,14 +18,14 @@ class LoginController extends Controller
         $email = $request->email;
         $password = $request->password;
 
-        if(Auth::attempt(['email' => $email, 'password' => $password])){
+        if(auth()->attempt(['email' => $email, 'password' => $password])){
             return redirect()->route('list');
         }else{
             return redirect()->route('login');
         }
     }
     public function logout(){
-        Auth::logout();
+        auth()->user()->logout();
         return redirect()->route('login');
     }
 }

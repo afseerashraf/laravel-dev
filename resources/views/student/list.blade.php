@@ -3,12 +3,17 @@
 @section('content')
 
 <h5>
-    @if (session()->has('message'))
-        {{ session('message') }}
-    @endif
+  @if (session()->has('message'))
+  {{ session('message') }}
+  @endif
 </h5>
 <h3>{{ auth()->User()->email }}</h3>
-<a href="{{ route('create') }}" class="btn btn-outline-success">New</a>
+<a href="{{ route('create') }}" class="btn btn-outline-success">New</a><br>
+<form class="d-flex" action="{{ route('search') }}" method="post">
+  @csrf
+  <input class="form-control me-2" type="search" name="search" placeholder="Search student..." aria-label="Search">
+  <button class="btn btn-primary" type="submit">Search</button>
+</form>
 <table class="table">
   <thead>
     <tr>
@@ -35,7 +40,7 @@
       <td><a href="{{ route('edit', encrypt($student->id)) }}" class="btn btn-outline-primary">Edit</a><a href="{{ route('student.delete', encrypt($student->id)) }}" class="btn btn-outline-danger">Delete</a></td>
     </tr>
     @endforeach
-   
+
   </tbody>
 </table>
 <a href="{{ route('logout') }}" class="btn btn-outline-success">Logout</a>
