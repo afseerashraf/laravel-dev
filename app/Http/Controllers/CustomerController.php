@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
+  public function customer(){
+    return view('customer.customer');
+  }
     public function create(Request $request){
         $customer = new Customer();
         $customer->branch_id = $request->branch_id;
@@ -23,9 +26,9 @@ class CustomerController extends Controller
         return redirect()->route('customer.detiles');
     }
     public function detiles(){
-      $branch = Branch::find(3);
-      return view('customer.detiles', compact('branch'));
-    }
+     $customers = Customer::has('customerBranch')->get();
+     return view('customer.detiles', compact('customers'));
 
    
+  }
 }

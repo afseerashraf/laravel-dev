@@ -19,5 +19,8 @@ class branches_seeder extends Seeder
         Branch::create([
             'name' => 'Thrissure',
         ]);
+        Branch::create([
+            'name' => 'banglore',
+        ]);
     }
 }
