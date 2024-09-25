@@ -22,7 +22,7 @@ class StudentPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'studentName' => ['required', 'alpha'],
+            'studentName' => ['required',  'regex:/^[a-zA-Z\s]+$/'],
             'email' => ['required', 'email'],
             'mobile' => ['required', 'numeric'],
             'dob' => ['required', 'date'],

@@ -18,14 +18,27 @@ class LoginController extends Controller
         $email = $request->email;
         $password = $request->password;
 
-        if(auth()->attempt(['email' => $email, 'password' => $password])){
+        if(Auth::attempt(['email' => $email, 'password' => $password])){
             return redirect()->route('list');
         }else{
             return redirect()->route('login');
         }
     }
     public function logout(){
-        auth()->user()->logout();
+        Auth::logout();
         return redirect()->route('login');
+    }
+    public function customer(){
+        return view('customer.login');
+    }
+    public function doLogin(LoginRequest $request){
+        $email = $request->email;
+        $password = $request->password;
+
+        if(auth()->guard('customer')->attempt(['email'=> $email, 'password' => $request->password])){
+            return redirect()->route('list');
+        }else{
+            return redirect()->route('customerLoginView');
+        }
     }
 }

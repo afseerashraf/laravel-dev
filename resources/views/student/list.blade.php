@@ -3,15 +3,17 @@
 @section('content')
 
 <h5>
+  <div class="continer-fluid">
   @if (session()->has('message'))
   {{ session('message') }}
   @endif
 </h5>
-<h3>{{ auth()->User()->email }}</h3>
-<a href="{{ route('create') }}" class="btn btn-outline-success">New</a><br>
+<h3>Welcome {{ auth()->user()->name }}</h3>
+
+<a href="{{ route('createStudent') }}" class="btn btn-outline-success">New</a><br><br>
 <form class="d-flex" action="{{ route('search') }}" method="post">
   @csrf
-  <input class="form-control me-2" type="search" name="search" placeholder="Search student..." aria-label="Search">
+  <input class="form-control me-2" type="search" name="searchName" placeholder="Search student name..." aria-label="Search">
   <button class="btn btn-primary" type="submit">Search</button>
 </form>
 <table class="table">
@@ -24,8 +26,6 @@
       <th scope="col">Date of Birth</th>
       <th scope="col">Cource</th>
       <th>Action</th>
-
-
     </tr>
   </thead>
   <tbody>
@@ -44,4 +44,5 @@
   </tbody>
 </table>
 <a href="{{ route('logout') }}" class="btn btn-outline-success">Logout</a>
+</div>
 @endsection

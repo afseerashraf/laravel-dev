@@ -39,7 +39,7 @@
         </div><br>
         <select class="form-select" name="cource" aria-label="Default select example">
             <option selected>Open this select menu</option>
-            <option value="Webdevelopment">webdevelopment</option>
+            <option value="Webdevelopment">web development</option>
             <option value="Ethickal Hacking">Ethical Hacking</option>
             <option value="Uxdesign">UX Design</option>
             @error('cource') <div class="alert alert-danger">{{ $message }}</div> @enderror

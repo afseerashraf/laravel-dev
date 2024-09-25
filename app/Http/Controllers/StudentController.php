@@ -25,6 +25,7 @@ class StudentController extends Controller
         $student->save();
 
        return redirect()->route('list');
+   
 
     }
     public function getStudents(){
@@ -32,12 +33,12 @@ class StudentController extends Controller
         return view('student.list', compact('students'));
     }
     public function search(Request $request){
-        $name = $request->search;
+        $name = $request->searchName;
         $student = DB::table('students')
         ->where('student_name', '=', $name)
         ->get();
         if($student->isNotEmpty()){
-            return $student;
+            return dd($student);
         }else{
             return "Does not find $name";
         }
@@ -45,7 +46,7 @@ class StudentController extends Controller
     public function edit($id){
         $studentID = Crypt::decrypt($id);
         $student = Student::find($studentID);
-        return view('student.edit', compact('student'));
+        return view('student.edit', compact('student'));   
     }
     public function update(Request $request){
         $studentID = Crypt::decrypt($request->id);
