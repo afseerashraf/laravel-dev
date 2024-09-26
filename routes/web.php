@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
+use App\Http\Middleware\LoginMiddleware;
 use App\Models\Student;
 
 
@@ -24,7 +25,6 @@ Route::prefix('admin')->group(function () {
         Route::get('general', 'general')->name('general');
     });
 });
-
     Route::prefix('customer')->group(function () {
         Route::controller(CustomerController::class)->group(function () {
             Route::get('customer', 'customer')->name('create.customer');
@@ -32,7 +32,7 @@ Route::prefix('admin')->group(function () {
             Route::get('detiles', 'detiles')->name('customer.detiles');
         });
     });
- Route::middleware('auth')->group(function () {  
+ Route::middleware('AdminAndcustomer')->group(function () {  
     Route::prefix('student')->group(function () {
         Route::controller(StudentController::class)->group(function () {
             Route::get('index', 'index')->name('createStudent');
